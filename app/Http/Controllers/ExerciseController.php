@@ -58,7 +58,7 @@ class ExerciseController extends Controller
 
         $user->exercises()->attach($exercise, ['reps' => $reps]);
 
-        return redirect()->back()->with('success', 'Reps added successfully.');
+        return redirect()->route('analytics')->with('success', 'Reps added successfully.');
     }
 
     /**
