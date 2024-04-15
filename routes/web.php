@@ -3,15 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ExerciseController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExerciseUserController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 
 Route::group(['middleware' => ['auth']], function () {
@@ -25,6 +23,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/exercise', [ExerciseController::class, 'index'])->name('exercise');
     Route::post('/record-exercise', [ExerciseController::class, 'storeReps'])->name('record-exercise.store');
+
+    Route::get('analytics', [DashboardController::class, 'index'])->name('analytics');
     
 });
 
