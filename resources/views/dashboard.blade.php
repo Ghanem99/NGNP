@@ -12,19 +12,21 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
                             <h3 class="text-lg font-semibold text-gray-800">Push Up</h3>
-                            <p class="text-2xl font-bold text-gray-900">10</p>
+                            <p class="text-2xl font-bold text-gray-900">{{ $pushups }}</p>
                         </div>
                         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
                             <h3 class="text-lg font-semibold text-gray-800">Pull Up</h3>
-                            <p class="text-2xl font-bold text-gray-900">20</p>
+                            <p class="text-2xl font-bold text-gray-900">{{ $pullups }}</p>
                         </div>
                         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
                             <h3 class="text-lg font-semibold text-gray-800">Squat</h3>
-                            <p class="text-2xl font-bold text-gray-900">30</p>
+                            <p class="text-2xl font-bold text-gray-900">{{ $squats }}</p>
                         </div>
-                        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
-                            <h3 class="text-lg font-semibold text-gray-800">Total</h3>
-                            <p class="text-2xl font-bold text-gray-900">40</p>
+                        <div>
+                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Total Reps</h3>
+                            <p class="text-2xl font-bold text-gray-900">{{ $totalReps }}</p>
+                        </div>
                         </div>
                     </div>
 
